@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "bb6d6180-d903-4a5a-a500-55bb79b128c3",
+		"name": "Examen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16214920"
+	},
+	"item": [
+		{
+			"name": "Create Encuesta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre_Usuario\": \"Carlos@hotmail.com\",\r\n    \"contrasena_Usuario\": \"123456\",\r\n    \"contrasena_Confirmada\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Path}}/classes",
+					"host": [
+						"{{Path}}"
+					],
+					"path": [
+						"classes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Encuesta",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{Path}}/classes",
+					"host": [
+						"{{Path}}"
+					],
+					"path": [
+						"classes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Encuesta",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Id\": 1,\r\n    \"Nombre_Encuesta\": \"Marketing\",\r\n    \"Descripcion_Encuesta\": \"Para mercadeo\" \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Path}}/classes/1",
+					"host": [
+						"{{Path}}"
+					],
+					"path": [
+						"classes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delet",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Path",
+			"value": "https://localhost:44369/api",
+			"type": "string"
+		}
+	]
+}
